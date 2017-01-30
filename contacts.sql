@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 25 2016 г., 19:00
+-- Время создания: Янв 30 2017 г., 17:52
 -- Версия сервера: 5.7.11
 -- Версия PHP: 5.6.19
 
@@ -28,6 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `contacts` (
   `id` int(11) NOT NULL,
+  `legal_entity` varchar(150) NOT NULL,
+  `INN` varchar(100) NOT NULL,
   `address_place` varchar(100) NOT NULL,
   `address_street` varchar(100) NOT NULL,
   `address_country` varchar(50) NOT NULL,
@@ -41,8 +43,8 @@ CREATE TABLE `contacts` (
 -- Дамп данных таблицы `contacts`
 --
 
-INSERT INTO `contacts` (`id`, `address_place`, `address_street`, `address_country`, `office`, `skype`, `facebook`, `e-mail`) VALUES
-(1, 'БЦ ', 'Ул. Верейская 29,стр 154', 'Москва, 121357', '+7 (499) 951-03-20', 'elenablack3', 'www.facebook.com/pellinica', 'info@pellini.ru');
+INSERT INTO `contacts` (`id`, `legal_entity`, `INN`, `address_place`, `address_street`, `address_country`, `office`, `skype`, `facebook`, `e-mail`) VALUES
+(1, 'ООО «ЛР-Плюс1234»', '7730107052/773001001 ОГРН 1037739006689', 'QWE &quot;123456&quot;', 'Ул. Верейская 29,стр 154', 'Москва, 121357', '+7 (499) 951-03-20', 'elenablack3', 'www.facebook.com/pellinica', 'info@pellini.ru');
 
 --
 -- Индексы сохранённых таблиц
